@@ -1,7 +1,17 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace
 """
-    OK Deploy – A continuous deployment pipeline implementation to transport applications to a runtime context using build-packs.
+    OK Deploy – A continuous deployment pipeline implementation to
+    transport applications to a runtime context using build-packs.
+
+    “OK Deploy” helps you to deliver applications to their intended
+    target runtime, and manage them during their life-cycle while
+    remaining in the data center.
+
+    It is designed to have similarities to ``git``'s interface. “OK”
+    projects are normal ``git`` repositories, with some conventions
+    on the file system structure and branch names applied.
+
 
     Copyright ©  2015 1&1 Group
 
