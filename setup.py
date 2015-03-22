@@ -16,7 +16,7 @@
     uses that to provide Invoke tasks that work for any project, based on
     its project metadata.
 
-    Copyright ©  2015 1&1 Group <btw-users@googlegroups.com>
+    Copyright ©  2015 1&1 Group
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -35,6 +35,7 @@
 import os
 import re
 import sys
+import textwrap
 from codecs import open # pylint: disable=redefined-builtin
 from collections import defaultdict
 
@@ -84,7 +85,7 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
     with open(srcfile('src', package_name, '__init__.py'), encoding='utf-8') as handle:
         pkg_init = handle.read()
         # Get default long description from docstring
-        metadata['long_description'] = re.search(r'^"""(.+?)^"""$', pkg_init, re.DOTALL|re.MULTILINE).group(1).strip()
+        metadata['long_description'] = re.search(r'^"""(.+?)^"""$', pkg_init, re.DOTALL|re.MULTILINE).group(1)
         for line in pkg_init.splitlines():
             match = re.match(r"""^__({0})__ += (?P<q>['"])(.+?)(?P=q)$""".format('|'.join(expected_keys)), line)
             if match:
@@ -92,6 +93,11 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
 
     if not all(i in metadata for i in expected_keys):
         raise RuntimeError("Missing or bad metadata in '{0}' package".format(name))
+    text = metadata['long_description'].strip().splitlines()
+    if text:
+        text = text[0] + '\n' + textwrap.dedent('\n'.join(text[1:]))
+        metadata['long_description'] = text
+    metadata['keywords'] = metadata['keywords'].replace(',', ' ').strip().split()
 
     # Load requirements files
     requirements_files = dict(

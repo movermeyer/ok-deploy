@@ -3,7 +3,7 @@
 """
     OK Deploy – A continuous deployment pipeline implementation to transport applications to a runtime context using build-packs.
 
-    Copyright ©  2015 1&1 Group <btw-users@googlegroups.com>
+    Copyright ©  2015 1&1 Group
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
