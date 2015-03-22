@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace, attribute-defined-outside-init, invalid-name
 """
-    OK Deploy – A continuous deployment pipeline implementation to transport applications to a runtime context using build-packs.
+    OK Deploy – A continuous deployment pipeline implementation to
+    transport applications to a runtime context using build-packs.
 
     This setuptools script follows the DRY principle and tries to
     minimize repetition of project metadata by loading it from other
