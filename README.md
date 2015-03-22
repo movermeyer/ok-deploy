@@ -14,7 +14,7 @@ A continuous deployment pipeline implementation to transport applications to a r
 
 ## Overview
 
-“OK Deploy” allows you to deliver applications to their
+“OK Deploy” helps you to deliver applications to their
 intended target runtime, and manage them during their life-cycle
 while remaining in the data center.
 The initial focus is Java web applications and Tomcat 7/8.
