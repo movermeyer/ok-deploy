@@ -19,7 +19,7 @@
 """
 from __future__ import absolute_import, unicode_literals, print_function
 
-__url__             = "https://github.com/Build-The-Web/ok-deploy"
+__url__             = "https://github.com/Feed-The-Web/ok-deploy"
 __version__         = "0.1.0"
 __license__         = "Apache 2.0"
 __author__          = "Jürgen Hermann"

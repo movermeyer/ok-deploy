@@ -2,10 +2,10 @@
 
 A continuous deployment pipeline implementation to transport applications to a runtime context using build-packs.
 
-![logo](https://raw.githubusercontent.com/Build-The-Web/ok-deploy/master/docs/_static/img/ok-logo-64.png)
- [![Travis CI](https://api.travis-ci.org/Build-The-Web/ok-deploy.svg)](https://travis-ci.org/Build-The-Web/ok-deploy)
- [![GitHub Issues](https://img.shields.io/github/issues/Build-The-Web/ok-deploy.svg)](https://github.com/Build-The-Web/ok-deploy/issues)
- [![License](https://img.shields.io/pypi/l/ok-deploy.svg)](https://github.com/Build-The-Web/ok-deploy/blob/master/LICENSE)
+![logo](https://raw.githubusercontent.com/Feed-The-Web/ok-deploy/master/docs/_static/img/ok-logo-64.png)
+ [![Travis CI](https://api.travis-ci.org/Feed-The-Web/ok-deploy.svg)](https://travis-ci.org/Feed-The-Web/ok-deploy)
+ [![GitHub Issues](https://img.shields.io/github/issues/Feed-The-Web/ok-deploy.svg)](https://github.com/Feed-The-Web/ok-deploy/issues)
+ [![License](https://img.shields.io/pypi/l/ok-deploy.svg)](https://github.com/Feed-The-Web/ok-deploy/blob/master/LICENSE)
  [![Development Status](https://pypip.in/status/ok-deploy/badge.svg)](https://pypi.python.org/pypi/ok-deploy/)
  [![Latest Version](https://img.shields.io/pypi/v/ok-deploy.svg)](https://pypi.python.org/pypi/ok-deploy/)
  [![Download format](https://pypip.in/format/ok-deploy/badge.svg)](https://pypi.python.org/pypi/ok-deploy/)
@@ -74,13 +74,13 @@ Control the state of a deployed application.
 To create a working directory for this project, call these commands:
 
 ```sh
-git clone "https://github.com/Build-The-Web/ok-deploy.git"
+git clone "https://github.com/Feed-The-Web/ok-deploy.git"
 cd "ok-deploy"
 . .env --yes --develop
 invoke build --docs test check
 ```
 
-See [CONTRIBUTING](https://github.com/Build-The-Web/ok-deploy/blob/master/CONTRIBUTING.md) for more.
+See [CONTRIBUTING](https://github.com/Feed-The-Web/ok-deploy/blob/master/CONTRIBUTING.md) for more.
 
 
 ## References
