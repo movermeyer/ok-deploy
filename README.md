@@ -2,6 +2,7 @@
 
 A continuous deployment pipeline implementation to transport applications to a runtime context using build-packs.
 
+![logo](https://raw.githubusercontent.com/Build-The-Web/ok-deploy/master/docs/_static/img/ok-logo-64.png)
  [![Travis CI](https://api.travis-ci.org/Build-The-Web/ok-deploy.svg)](https://travis-ci.org/Build-The-Web/ok-deploy)
  [![GitHub Issues](https://img.shields.io/github/issues/Build-The-Web/ok-deploy.svg)](https://github.com/Build-The-Web/ok-deploy/issues)
  [![License](https://img.shields.io/pypi/l/ok-deploy.svg)](https://github.com/Build-The-Web/ok-deploy/blob/master/LICENSE)
