@@ -1,4 +1,4 @@
-# ok-deploy
+# OK Deploy
 
 A continuous deployment pipeline implementation to transport applications to a runtime context using build-packs.
 
