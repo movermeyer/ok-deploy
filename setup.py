@@ -31,18 +31,19 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 """
-##from __future__ import absolute_import, unicode_literals
 
+# Project data (the rest is parsed from __init__.py and other project files)
+name = 'ok-deploy'
+package_name = 'ok_deploy'
+
+# ~~~ BEGIN springerle/py-generic-project ~~~
+# Stdlib imports
 import os
 import re
 import sys
 import textwrap
 from codecs import open # pylint: disable=redefined-builtin
 from collections import defaultdict
-
-# Project data (the rest is parsed from __init__.py and other project files)
-name = 'ok-deploy'
-package_name = 'ok_deploy'
 
 # Import setuptools
 try:
