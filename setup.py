@@ -93,10 +93,12 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
 
     if not all(i in metadata for i in expected_keys):
         raise RuntimeError("Missing or bad metadata in '{0}' package".format(name))
-    text = metadata['long_description'].strip().splitlines()
+
+    text = metadata['long_description'].strip()
     if text:
-        text = text[0] + '\n' + textwrap.dedent('\n'.join(text[1:]))
-        metadata['long_description'] = text
+        metadata['description'], text = text.split('.', 1)
+        metadata['description'] = ' '.join(metadata['description'].split()).strip() # normalize whitespace
+        metadata['long_description'] = textwrap.dedent(text).strip()
     metadata['keywords'] = metadata['keywords'].replace(',', ' ').strip().split()
 
     # Load requirements files
@@ -155,8 +157,6 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
 
     metadata.update(dict(
         name = name,
-        description = ' '.join(metadata['long_description'].split('.')[0].split()), # normalize whitespace
-        url = metadata['url'],
         package_dir = {'': 'src'},
         packages = find_packages(srcfile('src'), exclude=['tests']),
         data_files = data_files.items(),
