@@ -1,0 +1,16 @@
+{
+    "email": "btw-users@googlegroups.com",
+    "features": "travis flake8 cli",
+    "full_name": "1&1 Group",
+    "github_url": "https://github.com/Build-The-Web/ok-deploy",
+    "github_username": "Build-The-Web",
+    "keywords": "hosted.by.github continuous.deployment automation build.packs devops",
+    "license": "Apache 2.0",
+    "pkg_name": "ok_deploy",
+    "project_name": "OK Deploy",
+    "repo_name": "ok-deploy",
+    "short_description": "A continuous deployment pipeline implementation to transport applications to a runtime context using build-packs",
+    "url": "https://github.com/Build-The-Web/ok-deploy",
+    "version": "0.1.0",
+    "year": "2015"
+}

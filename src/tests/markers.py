@@ -1,6 +1,10 @@
-# *- coding: utf-8 -*-
-# pylint: disable=wildcard-import, missing-docstring, no-self-use, bad-continuation
-""" Test the package metadata.
+# -*- coding: utf-8 -*-
+# pylint: disable=invalid-name
+""" py.test markers.
+
+    For details needed to understand these tests, refer to:
+        https://pytest.org/
+        http://pythontesting.net/start-here/
 """
 # Copyright ©  2015 1&1 Group <btw-users@googlegroups.com>
 #
@@ -17,11 +21,16 @@
 # limitations under the License.
 from __future__ import absolute_import, unicode_literals, print_function
 
-from ok_deploy import __version__ as version
+import pytest
 
 
-def test_semver():
-    """Test a proper semantic version is used."""
-    # TODO Test rules according to PEP440 - Version Identification and Dependency Specification
-    assert len(version.split('.')) == 3, "Semantic version M.m.µ OK"
-    assert all(i.isdigit for i in version.split('.')), "Semantic version parts are numeric"
+# See also setup.cfg » [pytest] » markers
+cli = pytest.mark.cli
+integration = pytest.mark.integration
+online = pytest.mark.online
+
+
+# Export all markers
+__all__ = [_k
+           for _k, _v in globals().items()
+           if _v.__class__ is cli.__class__]
