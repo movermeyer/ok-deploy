@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# pylint: disable=bad-continuation
-""" Short description.
+# pylint: disable=bad-continuation, unused-import
+""" CLI commands.
 """
-# Copyright ©  2015 1&1 Group
+# Copyright ©  2015 1&1 Group <btw-users@googlegroups.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,10 +17,5 @@
 # limitations under the License.
 from __future__ import absolute_import, unicode_literals, print_function
 
-import os
-import sys
-
-# from . import …
-
-
-__all__ = []
+# Load the command modules for registration
+from . import help  # noqa pylint: disable=redefined-builtin

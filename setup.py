@@ -23,7 +23,7 @@
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+        http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
@@ -94,7 +94,15 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
                 metadata[match.group(1)] = match.group(3)
 
     if not all(i in metadata for i in expected_keys):
-        raise RuntimeError("Missing or bad metadata in '{0}' package".format(name))
+        raise RuntimeError("Missing or bad metadata in '{0}' package: {1}"
+                           .format(name, ', '.join(sorted(set(expected_keys) - set(metadata.keys()))),))
+
+    text = metadata['long_description'].strip()
+    if text:
+        metadata['description'], text = text.split('.', 1)
+        metadata['description'] = ' '.join(metadata['description'].split()).strip() + '.' # normalize whitespace
+        metadata['long_description'] = textwrap.dedent(text).strip()
+    metadata['keywords'] = metadata['keywords'].replace(',', ' ').strip().split()
 
     text = metadata['long_description'].strip()
     if text:
@@ -120,8 +128,8 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
                         if line.startswith('-e'):
                             line = line.split()[1].split('#egg=')[1]
                         requires[key].append(line)
-    if 'pytest' not in requires['test']:
-        requires['test'].append('pytest')
+    if not any('pytest' == re.split('[\t ,<=>]', i.lower())[0] for i in requires['test']):
+        requires['test'].append('pytest') # add missing requirement
 
     # CLI entry points
     console_scripts = []

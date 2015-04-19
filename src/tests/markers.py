@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
-# pylint: disable=bad-continuation
-""" Short description.
+# pylint: disable=invalid-name
+""" py.test markers.
+
+    For details needed to understand these tests, refer to:
+        https://pytest.org/
+        http://pythontesting.net/start-here/
 """
-# Copyright ©  2015 1&1 Group
+# Copyright ©  2015 1&1 Group <btw-users@googlegroups.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,10 +21,16 @@
 # limitations under the License.
 from __future__ import absolute_import, unicode_literals, print_function
 
-import os
-import sys
-
-# from . import …
+import pytest
 
 
-__all__ = []
+# See also setup.cfg » [pytest] » markers
+cli = pytest.mark.cli
+integration = pytest.mark.integration
+online = pytest.mark.online
+
+
+# Export all markers
+__all__ = [_k
+           for _k, _v in globals().items()
+           if _v.__class__ is cli.__class__]
