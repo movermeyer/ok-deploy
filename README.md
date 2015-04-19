@@ -5,6 +5,7 @@ A continuous deployment pipeline implementation to transport applications to a r
 ![logo](https://raw.githubusercontent.com/Feed-The-Web/ok-deploy/master/docs/_static/img/ok-logo-64.png)
  [![Groups](https://img.shields.io/badge/Google_groups-ftw--users-orange.svg)](https://groups.google.com/forum/#!forum/ftw-users)
  [![Travis CI](https://api.travis-ci.org/Feed-The-Web/ok-deploy.svg)](https://travis-ci.org/Feed-The-Web/ok-deploy)
+ [![Coveralls](https://img.shields.io/coveralls/Feed-The-Web/ok-deploy.svg)](https://coveralls.io/r/Feed-The-Web/ok-deploy)
  [![GitHub Issues](https://img.shields.io/github/issues/Feed-The-Web/ok-deploy.svg)](https://github.com/Feed-The-Web/ok-deploy/issues)
  [![License](https://img.shields.io/pypi/l/ok-deploy.svg)](https://github.com/Feed-The-Web/ok-deploy/blob/master/LICENSE)
  [![Development Status](https://pypip.in/status/ok-deploy/badge.svg)](https://pypi.python.org/pypi/ok-deploy/)
