@@ -1,8 +1,9 @@
-# ok-deploy
+# OK Deploy
 
 A continuous deployment pipeline implementation to transport applications to a runtime context using build-packs.
 
  [![Travis CI](https://api.travis-ci.org/Build-The-Web/ok-deploy.svg)](https://travis-ci.org/Build-The-Web/ok-deploy)
+ [![Coveralls](https://img.shields.io/coveralls/Build-The-Web/ok-deploy.svg)](https://coveralls.io/r/Build-The-Web/ok-deploy)
  [![GitHub Issues](https://img.shields.io/github/issues/Build-The-Web/ok-deploy.svg)](https://github.com/Build-The-Web/ok-deploy/issues)
  [![License](https://img.shields.io/pypi/l/ok-deploy.svg)](https://github.com/Build-The-Web/ok-deploy/blob/master/LICENSE)
  [![Development Status](https://pypip.in/status/ok-deploy/badge.svg)](https://pypi.python.org/pypi/ok-deploy/)
@@ -24,6 +25,34 @@ and frankly also allows me to have a `ok computer` sub-command. :smiley:
 It is designed to have similarities to `git`'s interface.
 “OK” projects are normal `git` repositories, with some conventions on
 the file system structure and branch names applied.
+
+
+## Installation
+
+*OK Deploy* can be installed via ``pip install ok-deploy`` as usual,
+see [releases](https://github.com/Build-The-Web/ok-deploy/releases) for an overview of available versions.
+To get a bleeding-edge version from source, use these commands:
+
+```sh
+repo="Build-The-Web/ok-deploy"
+pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
+pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+```
+
+See [Contributing](#contributing) on how to create a full development environment.
+
+To add bash completion, read the [Click docs](http://click.pocoo.org/4/bashcomplete/#activation) about it,
+or just follow these instructions:
+
+```sh
+cmdname=ok-deploy
+mkdir -p ~/.bash_completion.d
+( export _$(tr a-z- A-Z_ <<<"$cmdname")_COMPLETE=source ; \
+  $cmdname >~/.bash_completion.d/$cmdname.sh )
+grep /.bash_completion.d/$cmdname.sh ~/.bash_completion >/dev/null \
+    || echo >>~/.bash_completion ". ~/.bash_completion.d/$cmdname.sh"
+. "/etc/bash_completion"
+```
 
 
 ## Usage
