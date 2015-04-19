@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace, attribute-defined-outside-init, invalid-name
+# pylint: disable=bad-continuation
 """
     OK Deploy – A continuous deployment pipeline implementation to
     transport applications to a runtime context using build-packs.
@@ -31,6 +32,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 """
+from __future__ import absolute_import, print_function
 
 # Project data (the rest is parsed from __init__.py and other project files)
 name = 'ok-deploy'
@@ -101,13 +103,6 @@ def _build_metadata(): # pylint: disable=too-many-locals, too-many-branches
     if text:
         metadata['description'], text = text.split('.', 1)
         metadata['description'] = ' '.join(metadata['description'].split()).strip() + '.' # normalize whitespace
-        metadata['long_description'] = textwrap.dedent(text).strip()
-    metadata['keywords'] = metadata['keywords'].replace(',', ' ').strip().split()
-
-    text = metadata['long_description'].strip()
-    if text:
-        metadata['description'], text = text.split('.', 1)
-        metadata['description'] = ' '.join(metadata['description'].split()).strip() # normalize whitespace
         metadata['long_description'] = textwrap.dedent(text).strip()
     metadata['keywords'] = metadata['keywords'].replace(',', ' ').strip().split()
 
