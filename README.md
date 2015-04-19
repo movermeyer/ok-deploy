@@ -29,6 +29,34 @@ It is designed to have similarities to `git`'s interface.
 the file system structure and branch names applied.
 
 
+## Installation
+
+*OK Deploy* can be installed via ``pip install ok-deploy`` as usual,
+see [releases](https://github.com/Build-The-Web/ok-deploy/releases) for an overview of available versions.
+To get a bleeding-edge version from source, use these commands:
+
+```sh
+repo="Build-The-Web/ok-deploy"
+pip install -r "https://raw.githubusercontent.com/$repo/master/requirements.txt"
+pip install -UI -e "git+https://github.com/$repo.git#egg=${repo#*/}"
+```
+
+See [Contributing](#contributing) on how to create a full development environment.
+
+To add bash completion, read the [Click docs](http://click.pocoo.org/4/bashcomplete/#activation) about it,
+or just follow these instructions:
+
+```sh
+cmdname=ok-deploy
+mkdir -p ~/.bash_completion.d
+( export _$(tr a-z- A-Z_ <<<"$cmdname")_COMPLETE=source ; \
+  $cmdname >~/.bash_completion.d/$cmdname.sh )
+grep /.bash_completion.d/$cmdname.sh ~/.bash_completion >/dev/null \
+    || echo >>~/.bash_completion ". ~/.bash_completion.d/$cmdname.sh"
+. "/etc/bash_completion"
+```
+
+
 ## Usage
 
 ### `ok init`
