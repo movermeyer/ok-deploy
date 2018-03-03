@@ -8,9 +8,9 @@ A continuous deployment pipeline implementation to transport applications to a r
  [![Coveralls](https://img.shields.io/coveralls/Feed-The-Web/ok-deploy.svg)](https://coveralls.io/r/Feed-The-Web/ok-deploy)
  [![GitHub Issues](https://img.shields.io/github/issues/Feed-The-Web/ok-deploy.svg)](https://github.com/Feed-The-Web/ok-deploy/issues)
  [![License](https://img.shields.io/pypi/l/ok-deploy.svg)](https://github.com/Feed-The-Web/ok-deploy/blob/master/LICENSE)
- [![Development Status](https://pypip.in/status/ok-deploy/badge.svg)](https://pypi.python.org/pypi/ok-deploy/)
+ [![Development Status](https://img.shields.io/pypi/status/ok-deploy.svg
  [![Latest Version](https://img.shields.io/pypi/v/ok-deploy.svg)](https://pypi.python.org/pypi/ok-deploy/)
- [![Download format](https://pypip.in/format/ok-deploy/badge.svg)](https://pypi.python.org/pypi/ok-deploy/)
+ [![Download format](https://img.shields.io/pypi/format/ok-deploy.svg
  [![Downloads](https://img.shields.io/pypi/dw/ok-deploy.svg)](https://pypi.python.org/pypi/ok-deploy/)
 
 
